@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>jQuery Scroll Swap Demo</title>
+    <style>
+    
+      .spread-out{
+        margin-top: 50vh;
+        margin-bottom: 50vh;
+      }
+      
+    </style>
+  </head>
+  <body>
+    
+    
+    <header class="vh-100 d-flex flex-column align-items-center justify-content-center">
+      <h1 class="text-center">Hello, world!<br>Scroll to see video</h1>
+    </header>
+
+    <!-- Example of a scroll video -->
+    <div class="video-scroll container position-relative text-center" style="height:200vh;">
+      <canvas class="sticky-top"></canvas>
+    </div>
+    
+    
+    <footer class="vh-100 p-5">Nothing here, just to demonstrate scrolling down.</footer>
+    
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-video-scroll2.js"></script>
+    <script>
+      $( document ).ready(function() {
+        
+        $( 'canvas' ).videoScroll({
+          width: 960,
+          height: 540,
+          imageFolder: 'images',
+          imageType: 'jpg',
+          imageCount: 60,
+          digits: 3
+        });
+        
+      });
+    </script>
+  </body>
+</html>
